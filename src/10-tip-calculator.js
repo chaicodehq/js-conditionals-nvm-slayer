@@ -30,5 +30,81 @@
  * @returns {{ tipPercentage: number, tipAmount: number, totalAmount: number } | null}
  */
 export function calculateTip(billAmount, serviceRating) {
-  // Your code here
+  if (billAmount <= 0) {
+    return null;
+  }
+
+  if (serviceRating == 1) {
+    var tip = billAmount * 0.05;
+    var totalAmount = billAmount + tip;
+
+    tip = Number(tip.toFixed(2));
+    totalAmount = Number(totalAmount.toFixed(2));
+
+    return {
+      tipPercentage: 5,
+      tipAmount: tip,
+      totalAmount: totalAmount
+    };
+  }
+
+  if (serviceRating == 2) {
+    var tip = billAmount * 0.1;
+    var totalAmount = billAmount + tip;
+
+    tip = Number(tip.toFixed(2));
+    totalAmount = Number(totalAmount.toFixed(2));
+
+    return {
+      tipPercentage: 10,
+      tipAmount: tip,
+      totalAmount: totalAmount
+    };
+  }
+
+  if (serviceRating == 3) {
+    var tip = billAmount * 0.15;
+    var totalAmount = billAmount + tip;
+
+    tip = Number(tip.toFixed(2));
+    totalAmount = Number(totalAmount.toFixed(2));
+
+    return {
+      tipPercentage: 15,
+      tipAmount: tip,
+      totalAmount: totalAmount
+    };
+  }
+
+  if (serviceRating == 4) {
+    var tip = billAmount * 0.2;
+    var totalAmount = billAmount + tip;
+
+    tip = Number(tip.toFixed(2));
+    totalAmount = Number(totalAmount.toFixed(2));
+
+    return {
+      tipPercentage: 20,
+      tipAmount: tip,
+      totalAmount: totalAmount
+    };
+  }
+
+  if (serviceRating == 5) {
+    var tip = billAmount * 0.25;
+    var totalAmount = billAmount + tip;
+
+    tip = Number(tip.toFixed(2));
+    totalAmount = Number(totalAmount.toFixed(2));
+
+    return {
+      tipPercentage: 25,
+      tipAmount: tip,
+      totalAmount: totalAmount
+    };
+  } else {
+    return null;
+  }
 }
+
+
